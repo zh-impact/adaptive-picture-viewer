@@ -33,6 +33,7 @@ import './index.css';
   const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
   const info = document.getElementById('info') as HTMLSpanElement;
   const openBtn = document.getElementById('openBtn') as HTMLButtonElement;
+  const exitBtn = document.getElementById('exitBtn') as HTMLButtonElement;
 
   let files: string[] = [];
   let idx = -1;
@@ -279,6 +280,10 @@ import './index.css';
   });
 
   openBtn.addEventListener('click', openImages);
+
+  exitBtn.addEventListener('click', () => {
+    window.viewer.exit();
+  });
 
   // 初始化
   resizeCanvas();

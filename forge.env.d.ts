@@ -6,6 +6,7 @@ declare global {
       moveToBestDisplay: (width: number, height: number) => Promise<boolean>;
       openImagesDialog: () => Promise<string[]>;
       platform: NodeJS.Platform;
+      exit: () => void;
     };
   }
 }

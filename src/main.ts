@@ -76,6 +76,10 @@ ipcMain.handle('dialog:open-images', async (e) => {
   return result.filePaths.filter(isImageFile);
 });
 
+ipcMain.handle('app:exit', () => {
+  app.quit();
+});
+
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (started) {
   app.quit();

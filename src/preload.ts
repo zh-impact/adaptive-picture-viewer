@@ -8,4 +8,5 @@ contextBridge.exposeInMainWorld('viewer', {
     ipcRenderer.invoke('viewer:move-to-best-display', { width, height }),
   openImagesDialog: () => ipcRenderer.invoke('dialog:open-images'),
   platform: process.platform,
+  exit: () => ipcRenderer.invoke('app:exit'),
 });
