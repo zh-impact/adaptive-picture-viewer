@@ -7,8 +7,12 @@ export default defineConfig(async () => {
   // @ts-ignore
   // eslint-disable-next-line import/no-unresolved
   const tailwind = await import('@tailwindcss/vite');
+  // eslint-disable-next-line
+  // @ts-ignore
+  // eslint-disable-next-line import/no-unresolved
+  const react = await import('@vitejs/plugin-react');
 
   return {
-    plugins: [tailwind.default?.()],
+    plugins: [tailwind.default?.(), react.default?.()],
   };
 });
